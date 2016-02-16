@@ -1,4 +1,4 @@
-# Schemas version 2.0
+# Schemas version 1.0
 YAML schema, examples, and validators for OpenControl format.
 
 ## Example Project Organizations
