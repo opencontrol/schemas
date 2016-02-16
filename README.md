@@ -25,6 +25,7 @@ name: System Name
 ## Component YAML
 ```yaml
 name: Name of the component
+key: Key of the component (defaults to the filename if not present)
 documentation_complete: Manual check if the documentation is complete (for gap analysis)
 references:
   - name: Name of the reference ie. EC2 website
