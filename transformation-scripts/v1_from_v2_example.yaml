@@ -23,12 +23,13 @@ satisfies:
       - component: UAA
         system: CloudFoundry
         verification: UAA_Verification_1
-    1.1.1:
-      implementation_status: partial
-      narrative: Justification in narrative form
     2.1:
       implementation_status: partial
       narrative: Justification in narrative form
+    1.1.1:
+      implementation_status: partial
+      narrative: Justification in narrative form
+schema_version: 2.0
 verifications:
   EC2_Verification_1:
     name: EC2 Verification 1

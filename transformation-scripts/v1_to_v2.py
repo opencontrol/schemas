@@ -2,7 +2,13 @@
 
 import yaml
 
-from utils import add_if_exists, transport_usable_data
+from utils import add_if_exists
+
+
+def transport_usable_data(new_data, old_data):
+    """ Adds the data structures that haven't changed to the new dictionary """
+    for field in UNCHANGED_FIELDS:
+        add_if_exists(new_data=new_data, old_data=old_data, field=field)
 
 
 def flatten_verifications(old_verifications):
