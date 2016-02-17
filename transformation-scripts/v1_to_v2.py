@@ -77,9 +77,9 @@ def convert(old_data):
     verifications = flatten_verifications(old_data.get('verifications', {}))
     if verifications:
         new_data['verifications'] = verifications
-    satsifies = convert_satsifies(old_data.get('satisfies', {}))
-    if satsifies:
-        new_data['satsifies'] = satsifies
+    satisfies = convert_satsifies(old_data.get('satisfies', {}))
+    if satisfies:
+        new_data['satisfies'] = satisfies
     return new_data
 
 
