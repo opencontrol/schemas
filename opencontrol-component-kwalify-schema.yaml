@@ -5,6 +5,9 @@ mapping:
     required: True
   key:
     type: str
+  schema_version:
+    type: number
+    required: True
   documentation_complete:
     type: bool
   references:
@@ -42,10 +45,10 @@ mapping:
       - type: map
         mapping:
           standard_key:
-            type: str
+            type: text
             required: True
           control_key:
-            type: str
+            type: text
             required: True
           narrative:
             type: str

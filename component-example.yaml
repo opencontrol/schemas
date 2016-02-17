@@ -27,3 +27,4 @@ satisfies:
       - system_key: other_system # System name of the verification (can link to other systems / components)
         component_key: other_component # System name of the verification (can link to other systems / components)
         verification_key: other_key # The specific verification ID that the reference links to
+schema_version: 2.0
