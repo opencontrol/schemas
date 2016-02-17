@@ -9,7 +9,7 @@ satisfies:
     CM-2:
       implementation_status: partial
       narrative: Justification in narrative form
-      refernces:
+      references:
       - verification: EC2_Verification_1
       - component: UAA
         system: CloudFoundry
@@ -18,15 +18,15 @@ satisfies:
     1.1:
       implementation_status: partial
       narrative: Justification in narrative form
-      refernces:
+      references:
       - verification: EC2_Verification_1
       - component: UAA
         system: CloudFoundry
         verification: UAA_Verification_1
-    2.1:
+    1.1.1:
       implementation_status: partial
       narrative: Justification in narrative form
-    1.1.1:
+    2.1:
       implementation_status: partial
       narrative: Justification in narrative form
 verifications:
