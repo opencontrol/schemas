@@ -33,6 +33,7 @@ satisfies:
   implementation_status: partial
   narrative: Justification in narrative form
   standard_key: PCI-DSS-MAY-2015
+schema_version: 2.0
 verifications:
 - key: EC2_Verification_2
   name: EC2 Governor 2

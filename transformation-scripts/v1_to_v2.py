@@ -5,9 +5,6 @@ import yaml
 from utils import add_if_exists, transport_usable_data
 
 
-UNCHANGED_FIELDS = ['name', 'documentation_complete', 'references']
-
-
 def flatten_verifications(old_verifications):
     """ Convert verifications from v1 to v2 """
     new_verifications = []
@@ -71,6 +68,8 @@ def convert(old_data):
     satisfies = convert_satisfies(old_data.get('satisfies', {}))
     if satisfies:
         new_data['satisfies'] = satisfies
+    # Tag new schema version
+    new_data['schema_version'] = 2.0
     return new_data
 
 
