@@ -1,23 +1,14 @@
-name: Amazon Elastic Compute Cloud
 documentation_complete: false
+name: Amazon Elastic Compute Cloud
 references:
 - name: Reference
   path: http://VerificationURL.com
   type: URL
-verifications:
-  EC2_Verification_1:
-    name: EC2 Verification 1
-    path: http://VerificationURL.com
-    type: URL
-  EC2_Verification_2:
-    name: EC2 Governor 2
-    path: artifact-ec2-1.png
-    type: Image
 satisfies:
   NIST-800-53:
     CM-2:
-      narrative: Justification in narrative form
       implementation_status: partial
+      narrative: Justification in narrative form
       refernces:
       - verification: EC2_Verification_1
       - component: UAA
@@ -25,8 +16,8 @@ satisfies:
         verification: UAA_Verification_1
   PCI-DSS-MAY-2015:
     1.1:
-      narrative: Justification in narrative form
       implementation_status: partial
+      narrative: Justification in narrative form
       refernces:
       - verification: EC2_Verification_1
       - component: UAA
@@ -38,3 +29,12 @@ satisfies:
     1.1.1:
       implementation_status: partial
       narrative: Justification in narrative form
+verifications:
+  EC2_Verification_1:
+    name: EC2 Verification 1
+    path: http://VerificationURL.com
+    type: URL
+  EC2_Verification_2:
+    name: EC2 Governor 2
+    path: artifact-ec2-1.png
+    type: Image

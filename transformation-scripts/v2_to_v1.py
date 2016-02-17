@@ -1,19 +1,8 @@
+""" Python script to convert Open Controls schema version v2.0 to v1.0 """
+
 import yaml
 
-
-UNCHANGED_FIELDS = ['name', 'documentation_complete', 'references']
-
-
-def add_if_exists(new_data, old_data, field):
-    """ Adds the field to the new data if it exists in the old data """
-    if field in old_data:
-        new_data[field] = old_data.get(field)
-
-
-def transport_usable_data(new_data, old_data):
-    """ Adds the data structures that haven't changed to the new dictionary """
-    for field in UNCHANGED_FIELDS:
-        add_if_exists(new_data=new_data, old_data=old_data, field=field)
+from utils import add_if_exists, transport_usable_data
 
 
 def unflatten_verifications(old_verifications):
@@ -48,17 +37,27 @@ def unflatten_satisfies(old_satisfies):
     for element in old_satisfies:
         new_element = {}
         # Handle exsiting data
-        add_if_exists(new_data=new_element, old_data=element, field='narrative')
-        add_if_exists(new_data=new_element, old_data=element, field='implementation_status')
+        add_if_exists(
+            new_data=new_element,
+            old_data=element,
+            field='narrative'
+        )
+        add_if_exists(
+            new_data=new_element,
+            old_data=element,
+            field='implementation_status'
+        )
         # Handle covered_by
         refernces = transform_covered_by(element.get('covered_by', {}))
+        control_key = element['control_key']
+        standard_key = element['standard_key']
         if refernces:
             new_element['refernces'] = refernces
         # Unflatten
-        if element['standard_key'] not in new_satisfies:
-            new_satisfies[element['standard_key']] = {}
-        if element['control_key'] not in new_satisfies[element['standard_key']]:
-            new_satisfies[element['standard_key']][element['control_key']] = new_element
+        if standard_key not in new_satisfies:
+            new_satisfies[standard_key] = {}
+        if control_key not in new_satisfies[standard_key]:
+            new_satisfies[standard_key][control_key] = new_element
     return new_satisfies
 
 

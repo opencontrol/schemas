@@ -5,11 +5,15 @@ references:
   path: http://VerificationURL.com
   type: URL
 satisfies:
-- control_key: 1.1.1
-  covered_by: []
+- control_key: CM-2
+  covered_by:
+  - verification_key: EC2_Verification_1
+  - component_key: UAA
+    system_key: CloudFoundry
+    verification_key: UAA_Verification_1
   implementation_status: partial
   narrative: Justification in narrative form
-  standard_key: PCI-DSS-MAY-2015
+  standard_key: NIST-800-53
 - control_key: 1.1
   covered_by:
   - verification_key: EC2_Verification_1
@@ -24,15 +28,11 @@ satisfies:
   implementation_status: partial
   narrative: Justification in narrative form
   standard_key: PCI-DSS-MAY-2015
-- control_key: CM-2
-  covered_by:
-  - verification_key: EC2_Verification_1
-  - component_key: UAA
-    system_key: CloudFoundry
-    verification_key: UAA_Verification_1
+- control_key: 1.1.1
+  covered_by: []
   implementation_status: partial
   narrative: Justification in narrative form
-  standard_key: NIST-800-53
+  standard_key: PCI-DSS-MAY-2015
 verifications:
 - key: EC2_Verification_2
   name: EC2 Governor 2

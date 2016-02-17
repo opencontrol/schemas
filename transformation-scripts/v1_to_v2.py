@@ -1,19 +1,11 @@
+""" Python script to convert Open Controls schema version v1.0 to v2.0 """
+
 import yaml
+
+from utils import add_if_exists, transport_usable_data
 
 
 UNCHANGED_FIELDS = ['name', 'documentation_complete', 'references']
-
-
-def add_if_exists(new_data, old_data, field):
-    """ Adds the field to the new data if it exists in the old data """
-    if field in old_data:
-        new_data[field] = old_data.get(field)
-
-
-def transport_usable_data(new_data, old_data):
-    """ Adds the data structures that haven't changed to the new dictionary """
-    for field in UNCHANGED_FIELDS:
-        add_if_exists(new_data=new_data, old_data=old_data, field=field)
 
 
 def flatten_verifications(old_verifications):
