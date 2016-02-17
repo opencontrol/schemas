@@ -6,9 +6,8 @@ UNCHANGED_FIELDS = ['name', 'documentation_complete', 'references']
 
 def add_if_exists(new_data, old_data, field):
     """ Adds the field to the new data if it exists in the old data """
-    field_value = old_data.get(field)
-    if field_value:
-        new_data[field] = field_value
+    if field in old_data:
+        new_data[field] = old_data.get(field)
 
 
 def transport_usable_data(new_data, old_data):
@@ -43,10 +42,10 @@ def transform_covered_by(covered_by):
     return new_references
 
 
-def unflatten_satsifies(old_satsifies):
-    """ Convert satsifies from v2 to v1 """
-    new_satsifies = {}
-    for element in old_satsifies:
+def unflatten_satisfies(old_satisfies):
+    """ Convert satisfies from v2 to v1 """
+    new_satisfies = {}
+    for element in old_satisfies:
         new_element = {}
         # Handle exsiting data
         add_if_exists(new_data=new_element, old_data=element, field='narrative')
@@ -56,11 +55,12 @@ def unflatten_satsifies(old_satsifies):
         if refernces:
             new_element['refernces'] = refernces
         # Unflatten
-        if element['standard_key'] not in new_satsifies:
-            new_satsifies[element['standard_key']] = {}
-        if element['control_key'] not in new_satsifies[element['standard_key']]:
-             new_satsifies[element['standard_key']][element['control_key']] = new_element
-    return new_satsifies
+        if element['standard_key'] not in new_satisfies:
+            new_satisfies[element['standard_key']] = {}
+        if element['control_key'] not in new_satisfies[element['standard_key']]:
+            new_satisfies[element['standard_key']][element['control_key']] = new_element
+    return new_satisfies
+
 
 def convert(old_data):
     """ Convert the data from the v2 to v1 """
@@ -69,9 +69,9 @@ def convert(old_data):
     verifications = unflatten_verifications(old_data.get('verifications', {}))
     if verifications:
         new_data['verifications'] = verifications
-    satsifies = unflatten_satsifies(old_data.get('satsifies', {}))
-    if satsifies:
-        new_data['satsifies'] = satsifies
+    satisfies = unflatten_satisfies(old_data.get('satisfies', {}))
+    if satisfies:
+        new_data['satisfies'] = satisfies
     return new_data
 
 

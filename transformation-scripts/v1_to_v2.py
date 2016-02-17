@@ -6,9 +6,8 @@ UNCHANGED_FIELDS = ['name', 'documentation_complete', 'references']
 
 def add_if_exists(new_data, old_data, field):
     """ Adds the field to the new data if it exists in the old data """
-    field_value = old_data.get(field)
-    if field_value:
-        new_data[field] = field_value
+    if field in old_data:
+        new_data[field] = old_data.get(field)
 
 
 def transport_usable_data(new_data, old_data):
@@ -43,16 +42,16 @@ def transform_references(old_references):
     return new_references
 
 
-def convert_satsifies(old_satsifies):
-    """ Convert satsifies objects from v1 to v2 """
-    new_satsifies = []
-    for standard_key in old_satsifies:
-        for control_key in old_satsifies[standard_key]:
+def convert_satisfies(old_satisfies):
+    """ Convert satisfies objects from v1 to v2 """
+    new_satisfies = []
+    for standard_key in old_satisfies:
+        for control_key in old_satisfies[standard_key]:
             new_control_dict = {
                 'standard_key': standard_key,
                 'control_key': control_key
             }
-            old_control_dict = old_satsifies[standard_key][control_key]
+            old_control_dict = old_satisfies[standard_key][control_key]
             add_if_exists(
                 new_data=new_control_dict,
                 old_data=old_control_dict,
@@ -66,8 +65,8 @@ def convert_satsifies(old_satsifies):
             new_control_dict['covered_by'] = transform_references(
                 old_control_dict.get('references', {})
             )
-            new_satsifies.append(new_control_dict)
-    return new_satsifies
+            new_satisfies.append(new_control_dict)
+    return new_satisfies
 
 
 def convert(old_data):
@@ -77,7 +76,7 @@ def convert(old_data):
     verifications = flatten_verifications(old_data.get('verifications', {}))
     if verifications:
         new_data['verifications'] = verifications
-    satisfies = convert_satsifies(old_data.get('satisfies', {}))
+    satisfies = convert_satisfies(old_data.get('satisfies', {}))
     if satisfies:
         new_data['satisfies'] = satisfies
     return new_data
