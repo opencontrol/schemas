@@ -2,15 +2,7 @@
 
 import yaml
 
-from utils import add_if_exists
-
-UNCHANGED_FIELDS = ['name', 'documentation_complete', 'references']
-
-
-def transport_usable_data(new_data, old_data):
-    """ Adds the data structures that haven't changed to the new dictionary """
-    for field in old_data:
-        add_if_exists(new_data=new_data, old_data=old_data, field=field)
+from utils import add_if_exists, transport_usable_data
 
 
 def unflatten_verifications(old_verifications):
@@ -80,10 +72,3 @@ def convert(old_data):
     if satisfies:
         new_data['satisfies'] = satisfies
     return new_data
-
-
-if __name__ == '__main__':
-    data = yaml.load(open('v2_example.yaml'))
-    data = convert(data)
-    with open('v1_from_v2_example.yaml', 'w') as f:
-        f.write(yaml.dump(data, default_flow_style=False))
