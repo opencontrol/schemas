@@ -1,6 +1,7 @@
 """ Python script to convert Open Controls schema version v1.0 to v2.0 """
 
 import yaml
+import glob
 
 from utils import add_if_exists, transport_usable_data
 
@@ -51,6 +52,7 @@ def convert_satisfies(old_satisfies):
                 old_data=old_control_dict,
                 field='implementation_status'
             )
+            print(old_control_dict)
             new_control_dict['covered_by'] = transform_references(
                 old_control_dict.get('references', {})
             )
@@ -71,10 +73,3 @@ def convert(old_data):
     # Tag new schema version
     new_data['schema_version'] = 2.0
     return new_data
-
-
-if __name__ == '__main__':
-    data = yaml.load(open('v1_example.yaml'))
-    data = convert(data)
-    with open('v2_from_v1_example.yaml', 'w') as f:
-        f.write(yaml.dump(data, default_flow_style=False))

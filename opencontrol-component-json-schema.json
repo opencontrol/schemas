@@ -10,6 +10,13 @@
       "title": "documentation_complete",
       "type": "boolean"
     },
+    "schema_version": {
+      "title": "Schema Version",
+      "type": "number",
+      "enum": [
+        2.0
+      ]
+    },
     "references": {
       "title": "References",
       "type": "array",
