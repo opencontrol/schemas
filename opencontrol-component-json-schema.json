@@ -12,7 +12,7 @@
     },
     "system": {
       "title": "system",
-      "type": "string",
+      "type": "string"
     },
     "schema_version": {
       "title": "Schema Version",
