@@ -5,6 +5,9 @@ mapping:
     required: True
   key:
     type: str
+  system:
+    type: str
+    required: false
   schema_version:
     type: number
     required: True
@@ -51,11 +54,15 @@ mapping:
             type: text
             required: True
           narrative:
-            type: str
+            type: any # should be string, but this added to support current docs
             required: True
           implementation_status:
             type: str
-            enum: ['partial', 'complete', 'planned']
+            enum:
+              - partial
+              - complete
+              - planned
+              - none
           covered_by:
             type: seq
             sequence:

@@ -10,11 +10,15 @@
       "title": "documentation_complete",
       "type": "boolean"
     },
+    "system": {
+      "title": "system",
+      "type": "string",
+    },
     "schema_version": {
       "title": "Schema Version",
       "type": "number",
       "enum": [
-        2.0
+        2
       ]
     },
     "references": {
@@ -69,11 +73,11 @@
       "type": "array",
       "items": {
         "properties": {
-          "standard_key":{
+          "standard_key": {
             "title": "Standard Key",
             "type": "string"
           },
-          "control_key":{
+          "control_key": {
             "title": "Control Key",
             "type": "string"
           },
@@ -87,7 +91,8 @@
             "enum": [
               "complete",
               "partial",
-              "planned"
+              "planned",
+              "none"
             ]
           },
           "covered_by": {
