@@ -84,8 +84,8 @@
         }
       }
     },
-    "covered_by": {
-      "title": "Covered By",
+    "satisfies": {
+      "title": "Satisfies",
       "type": "array",
       "items": {
         "properties": {
