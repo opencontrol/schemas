@@ -42,9 +42,7 @@ mapping:
           type:
             type: str
             required: True
-          steps:
-            type: str
-          filename:
+          description:
             type: str
           test_passed:
             type: bool
