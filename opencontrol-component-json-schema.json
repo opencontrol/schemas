@@ -65,11 +65,7 @@
             "title": "Type",
             "type": "string"
           },
-          "steps": {
-            "title": "Type",
-            "type": "string"
-          },
-          "filename": {
+          "description": {
             "title": "Type",
             "type": "string"
           },
