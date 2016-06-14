@@ -16,10 +16,7 @@
     },
     "schema_version": {
       "title": "Schema Version",
-      "type": "number",
-      "enum": [
-        2
-      ]
+      "type": "string"
     },
     "references": {
       "title": "References",
