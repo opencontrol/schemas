@@ -9,7 +9,7 @@ mapping:
     type: str
     required: false
   schema_version:
-    type: number
+    type: any # V2 is a number, V3 is a string (semantic version)
     required: True
   documentation_complete:
     type: bool
