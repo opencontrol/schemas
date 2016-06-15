@@ -62,6 +62,8 @@ mapping:
           narrative:
             type: any # should be string, but this added to support current docs
             required: True
+          control_origin:
+            type: str
           implementation_status:
             type: str
             enum:
