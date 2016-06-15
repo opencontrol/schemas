@@ -64,6 +64,17 @@ mapping:
             required: True
           control_origin:
             type: str
+          parameters:
+            type: seq
+            sequence:
+              - type: map
+                mapping:
+                  key:
+                    type: str
+                    required: True
+                  text:
+                    type: str
+                    required: True
           implementation_status:
             type: str
             enum:
