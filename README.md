@@ -1,4 +1,4 @@
-# Schemas version 2.0
+# Schemas
 YAML schema, examples, and validators for OpenControl format.
 
 ## Example Project Organizations
@@ -27,6 +27,7 @@ name: System Name
 name: Name of the component
 key: Key of the component (defaults to the filename if not present)
 documentation_complete: Manual check if the documentation is complete (for gap analysis)
+schema_version: 3.0.0
 references:
   - name: Name of the reference ie. EC2 website
     path: Relative path of local file or URL ie. diagrams/diagram-1.png
@@ -46,8 +47,14 @@ verifications:
 satisfies:
   - standard_key: Standard Key (NIST-800-53)
     control_key: Control Key (CM-2)
-    narrative: Justification text
+    narrative:
+      - key: The optional key that represents a particular section of the control. If the key is not specified, assume the string in the following text represents the entire control
+        text: The narrative text for the particular section / entire control if there is no key specified
     implementation_status: Manual status of implementation (for gap analysis)
+    control_origin: The text representing the control origination
+    parameters:
+     - key: "The key for a particular parameter of the specific control"
+       text: "The parameter text for a particular parameter of a specific control"
     covered_by:
       - verification_key: The specific verification ID that the reference links, no component or system is needed for internal references
       - system_key: System name of the verification (can link to other systems / components)
