@@ -6,7 +6,7 @@ We want to ensure a welcoming environment for all of our projects. Our staff fol
 
 We encourage you to read this project's CONTRIBUTING policy (you are here), its [LICENSE](LICENSE.md), and its [README](README.md).
 
-If you have any questions or want to read more, check out the [18F Open Source Policy GitHub repository]( https://github.com/18f/open-source-policy), or just [shoot us an email](mailto:18f@gsa.gov).
+If you have any questions or want to read more, check out the [18F Open Source Policy GitHub repository](https://github.com/18f/open-source-policy), or just [shoot us an email](mailto:18f@gsa.gov).
 
 ## Public domain
 
@@ -17,3 +17,21 @@ the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/pub
 All contributions to this project will be released under the CC0
 dedication. By submitting a pull request, you are agreeing to comply
 with this waiver of copyright interest.
+
+## Versioning
+
+This project abides by [Semantic Versioning](http://semver.org/). [The Kwalify file](opencontrol-component-kwalify-schema.yaml) will be the source of truth for any given version. Examples of what would constitute each type of version bump are below.
+
+### Major
+
+* New required field/attribute added
+* Structure of a field/attribute changes
+
+### Minor
+
+* Non-required attribute/field added
+* Attribute/field deprecated
+
+### Patch
+
+(We don't anticipate bumping the patch version.)
