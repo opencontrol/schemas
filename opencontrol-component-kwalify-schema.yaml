@@ -2,7 +2,7 @@ type: map
 mapping:
   name:
     type: str
-    required: True
+    required: true
   key:
     type: str
   system:
@@ -10,7 +10,7 @@ mapping:
     required: false
   schema_version:
     type: any # V2 is a number, V3 is a string (semantic version)
-    required: True
+    required: true
   documentation_complete:
     type: bool
   references:
@@ -20,12 +20,12 @@ mapping:
         mapping:
           name:
             type: str
-            required: True
+            required: true
           path:
             type: str
           type:
             type: str
-            required: True
+            required: true
   verifications:
     type: seq
     sequence:
@@ -33,15 +33,15 @@ mapping:
         mapping:
           key:
             type: str
-            required: True
+            required: true
           name:
             type: str
-            required: True
+            required: true
           path:
             type: str
           type:
             type: str
-            required: True
+            required: true
           description:
             type: str
           test_passed:
@@ -55,13 +55,13 @@ mapping:
         mapping:
           standard_key:
             type: text
-            required: True
+            required: true
           control_key:
             type: text
-            required: True
+            required: true
           narrative:
             type: any # should be string, but this added to support current docs
-            required: True
+            required: true
           control_origin:
             type: str
           parameters:
@@ -71,10 +71,10 @@ mapping:
                 mapping:
                   key:
                     type: str
-                    required: True
+                    required: true
                   text:
                     type: str
-                    required: True
+                    required: true
           implementation_status:
             type: str
             enum:
@@ -93,4 +93,4 @@ mapping:
                     type: str
                   verification_key:
                     type: str
-                    required: True
+                    required: true
