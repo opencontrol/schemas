@@ -2,7 +2,7 @@
 YAML schema, examples, and validators for OpenControl format.
 
 ## Example Project Organizations
-```bash
+```
 data
 ├── certifications
 │   ├── FedRAMP-low.yaml
