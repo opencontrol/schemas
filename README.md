@@ -2,28 +2,6 @@
 
 YAML schema, examples, and validators for OpenControl format.
 
-## Example project organization
-
-```
-data
-├── certifications
-│   ├── FedRAMP-low.yaml
-│   ├── FedRAMP-med.yaml
-│   └── LATO.yaml
-├── components
-│   └── 18F
-|       ├── system.yaml
-│       └── AC_Policy
-│           └── component.yaml
-└── standards
-    └── NIST-800-53.yaml
-```
-
-## System YAML
-```yaml
-name: System Name
-```
-
 ## Components
 
 Components represent individual parts of an application that deal with specific security requirements. For example, in the [AWS compliance documentation](https://github.com/opencontrol/aws-compliance) the [EC2](https://github.com/opencontrol/aws-compliance/blob/master/IAM/component.yaml) component deals with access control and identity management security requirements. In the [Cloud Foundry compliance documentation](https://github.com/opencontrol/cf-compliance), the [UAA](https://github.com/opencontrol/cf-compliance/blob/master/UAA/component.yaml) the [Cloud Controller](https://github.com/opencontrol/cf-compliance/tree/master/CloudController) components deal with those requirements. In a straightforward Django-based application, for example, Django would be the component that deals with access control and identity management. As a developer building an SSP you most likely only deal with the component documentation.
