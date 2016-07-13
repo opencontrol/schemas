@@ -1,28 +1,13 @@
 # Schemas
+
 YAML schema, examples, and validators for OpenControl format.
 
-## Example Project Organizations
-```
-data
-├── certifications
-│   ├── FedRAMP-low.yaml
-│   ├── FedRAMP-med.yaml
-│   └── LATO.yaml
-├── components
-│   └── 18F
-|       ├── system.yaml
-│       └── AC_Policy
-│           └── component.yaml
-└── standards
-    └── NIST-800-53.yaml
-```
+## Components
 
-## System YAML
-```yaml
-name: System Name
-```
+Components represent individual parts of an application that deal with specific security requirements. For example, in the [AWS compliance documentation](https://github.com/opencontrol/aws-compliance) the [EC2](https://github.com/opencontrol/aws-compliance/blob/master/IAM/component.yaml) component deals with access control and identity management security requirements. In the [Cloud Foundry compliance documentation](https://github.com/opencontrol/cf-compliance), the [UAA](https://github.com/opencontrol/cf-compliance/blob/master/UAA/component.yaml) the [Cloud Controller](https://github.com/opencontrol/cf-compliance/tree/master/CloudController) components deal with those requirements. In a straightforward Django-based application, for example, Django would be the component that deals with access control and identity management. As a developer building an SSP you most likely only deal with the component documentation.
 
-## Component YAML
+### Structure
+
 ```yaml
 name: Name of the component
 key: Key of the component (defaults to the filename if not present)
@@ -62,7 +47,12 @@ satisfies:
         verification_key: The specific verification ID that the reference links to
 ```
 
-## Standards Documentation
+## Standards
+
+A standard is a list composed of individual security requirements called controls. The U.S. Government's main security standard is [NIST 800-53](https://web.nvd.nist.gov/view/800-53/home).
+
+### Examples
+
 ```yaml
 # nist-800-53.yaml
 standards:
@@ -78,6 +68,11 @@ standards:
 ```
 
 ## Certifications
+
+Since standards can have thousands of security requirements (aka controls), agencies like the [GSA](http://www.gsa.gov/) or organizations such as [FedRAMP](https://www.fedramp.gov) have curated a list of controls they require in order grant an IT system Authority to Operate (ATO). The GSA, for example, developed a certification called [the Lightweight ATO (LATO)](https://gsablogs.gsa.gov/innovation/2014/12/10/it-security-security-in-an-agile-development-cloud-world-by-kurt-garbars/), which uses only 24 controls.
+
+### Example
+
 ```yaml
 # Fisma.yaml
 standards:
@@ -86,4 +81,35 @@ standards:
     C-3:
   PCI:
     6:
+```
+
+## opencontrol.yaml
+
+The `opencontrol.yaml` file defines an application's documentation configuration settings.
+
+### Structure
+
+```yaml
+schema_version: "1.0.0" # 1.0.0 is the current opencontrol.yaml schema version
+name: Project_Name # Name of the project
+metadata:
+  description: "A description of the system"
+  maintainers:
+    - maintainer_email@email.com
+components: # A list of paths to components written in the opencontrol format for more information view: https://github.com/opencontrol/schemas
+  - ./component-1
+certifications: # An optional list of certifications for more information visit: https://github.com/opencontrol/schemas
+  - ./cert-1.yaml
+standards: # An optional list of standards for more information visit: https://github.com/opencontrol/schemas
+  - ./standard-1.yaml
+dependencies:
+  certifications: # An optional list of certifications stored remotely
+    - url: https://github.com/18F/GSA-Certifications
+      revision: master
+  systems:  # An optional list of repos that contain an opencontrol.yaml stored remotely
+    - url: https://github.com/18F/cg-compliance
+      revision: master
+  standards:   # An optional list of remote repos containing standards info that contain an opencontrol.yaml
+    - url: https://github.com/opencontrol/NIST-800-53-Standards
+      revision: master
 ```
