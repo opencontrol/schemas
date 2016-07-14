@@ -62,8 +62,6 @@ mapping:
           narrative:
             type: str
             required: true
-          control_origin:
-            type: str
           parameters:
             type: seq
             sequence:
