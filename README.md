@@ -1,6 +1,6 @@
 # Schemas
 
-YAML schema, examples, and validators for OpenControl format.
+YAML schema, examples, and validators for OpenControl format. You can find the formal definitions and learn about how to do validation in the [`kwalify/`](kwalify/) folder.
 
 ## Components
 

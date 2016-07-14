@@ -1,4 +1,3 @@
-# this file is deprecated, and will be removed once external repositories stop relying on it in favor of those in `kwalify/`
 type: map
 mapping:
   name:
@@ -10,7 +9,7 @@ mapping:
     type: str
     required: false
   schema_version:
-    type: any # V2 is a number, V3 is a string (semantic version)
+    type: float
     required: true
   documentation_complete:
     type: bool
@@ -61,7 +60,7 @@ mapping:
             type: text
             required: true
           narrative:
-            type: any # should be string, but this added to support current docs
+            type: str
             required: true
           control_origin:
             type: str
