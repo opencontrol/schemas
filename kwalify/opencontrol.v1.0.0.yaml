@@ -1,0 +1,61 @@
+type: map
+mapping:
+  name:
+    type: str
+    required: true
+  schema_version:
+    type: str
+    required: true
+  metadata:
+    type: map
+    mapping:
+      description:
+        type: str
+        required: true
+      maintainers:
+        required: true
+        type: seq
+        sequence:
+          - type: str
+  components:
+    type: seq
+    sequence:
+      - type: str
+  certifications:
+    type: seq
+    sequence:
+      - type: str
+  standards:
+    type: seq
+    sequence:
+      - type: str
+  dependencies:
+    type: map
+    mapping:
+      certifications:
+        type: seq
+        sequence:
+          - type: map
+            mapping:
+              url:
+                type: str
+              revision:
+                type: str
+      standards:
+        type: seq
+        sequence:
+          - type: map
+            mapping:
+              url:
+                type: str
+              revision:
+                type: str
+      systems:
+        type: seq
+        sequence:
+          - type: map
+            mapping:
+              url:
+                type: str
+              revision:
+                type: str
