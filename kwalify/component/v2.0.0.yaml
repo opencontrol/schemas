@@ -23,9 +23,6 @@ mapping:
             required: true
           path:
             type: str
-          type:
-            type: str
-            required: true
   verifications:
     type: seq
     sequence:
@@ -39,9 +36,6 @@ mapping:
             required: true
           path:
             type: str
-          type:
-            type: str
-            required: true
           description:
             type: str
           test_passed:
