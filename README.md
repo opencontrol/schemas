@@ -47,6 +47,14 @@ satisfies:
         verification_key: The specific verification ID that the reference links to
 ```
 
+Example validation:
+
+```bash
+kwalify -f kwalify/component/v3.0.0.yaml examples/component_v3.0.0.yaml
+# OR
+pykwalify -s kwalify/component/v3.0.0.yaml -d examples/component_v3.0.0.yaml
+```
+
 ## Standards
 
 A standard is a list composed of individual security requirements called controls. The U.S. Government's main security standard is [NIST 800-53](https://web.nvd.nist.gov/view/800-53/home).
@@ -112,4 +120,12 @@ dependencies:
   standards:   # An optional list of remote repos containing standards info that contain an opencontrol.yaml
     - url: https://github.com/opencontrol/NIST-800-53-Standards
       revision: master
+```
+
+Example validation:
+
+```bash
+kwalify -f kwalify/opencontrol/v1.0.0.yaml examples/opencontrol_v1.0.0.yaml
+# OR
+pykwalify -s kwalify/opencontrol/v1.0.0.yaml -d examples/opencontrol_v1.0.0.yaml
 ```
