@@ -1,0 +1,106 @@
+type: map
+mapping:
+  name:
+    type: str
+    required: true
+  key:
+    type: str
+  system:
+    type: str
+    required: false
+  schema_version:
+    type: str
+    required: true
+  documentation_complete:
+    type: bool
+  responsible_role:
+    type: str
+  references:
+    type: seq
+    sequence:
+      - type: map
+        mapping:
+          name:
+            type: str
+            required: true
+          path:
+            type: str
+          type:
+            type: str
+            required: true
+  verifications:
+    type: seq
+    sequence:
+      - type: map
+        mapping:
+          key:
+            type: str
+            required: true
+          name:
+            type: str
+            required: true
+          path:
+            type: str
+          type:
+            type: str
+            required: true
+          description:
+            type: str
+          test_passed:
+            type: bool
+          last_run:
+            type: any
+  satisfies:
+    type: seq
+    sequence:
+      - type: map
+        mapping:
+          standard_key:
+            type: text
+            required: true
+          control_key:
+            type: text
+            required: true
+          narrative:
+            required: true
+            type: seq
+            sequence:
+              - type: map
+                mapping:
+                  key:
+                    type: str
+                  text:
+                    type: str
+                    required: true
+          control_origin:
+            type: str
+          parameters:
+            type: seq
+            sequence:
+              - type: map
+                mapping:
+                  key:
+                    type: str
+                    required: true
+                  text:
+                    type: str
+                    required: true
+          implementation_status:
+            type: str
+            enum:
+              - partial
+              - complete
+              - planned
+              - none
+          covered_by:
+            type: seq
+            sequence:
+              - type: map
+                mapping:
+                  system_key:
+                    type: str
+                  component_key:
+                    type: str
+                  verification_key:
+                    type: str
+                    required: true
