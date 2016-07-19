@@ -76,6 +76,11 @@ mapping:
             type: str
           control_origins:
             type: seq
+            sequence:
+              - type: map
+                mapping:
+                  text:
+                    type: str
           parameters:
             type: seq
             sequence:
@@ -97,12 +102,15 @@ mapping:
           implementation_statuses:
             type: seq
             sequence:
-              - type: str
-                enum:
-                  - partial
-                  - complete
-                  - planned
-                  - none
+              - type: map
+                mapping:
+                  text:
+                    type: str
+                    enum:
+                      - partial
+                      - complete
+                      - planned
+                      - none
           covered_by:
             type: seq
             sequence:
