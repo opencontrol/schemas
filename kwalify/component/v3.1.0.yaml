@@ -74,6 +74,8 @@ mapping:
                     required: true
           control_origin:
             type: str
+          control_origins:
+            type: seq
           parameters:
             type: seq
             sequence:
@@ -92,6 +94,15 @@ mapping:
               - complete
               - planned
               - none
+          implementation_statuses:
+            type: seq
+            sequence:
+              - type: str
+                enum:
+                  - partial
+                  - complete
+                  - planned
+                  - none
           covered_by:
             type: seq
             sequence:
