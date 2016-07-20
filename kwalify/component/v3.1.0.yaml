@@ -73,6 +73,9 @@ mapping:
                     type: str
                     required: true
           control_origin:
+            desc: |
+              This field will be deprectated in future versions of the schema.
+              Please use control_origins.
             type: str
           control_origins:
             type: seq
@@ -90,6 +93,9 @@ mapping:
                     type: str
                     required: true
           implementation_status:
+            desc: |
+              This field will be deprectated in future versions of the schema.
+              Please use implementation_statuses.
             type: str
             enum:
               - partial
