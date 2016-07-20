@@ -26,7 +26,6 @@ mapping:
             type: str
           type:
             type: str
-            required: true
   verifications:
     type: seq
     sequence:
@@ -42,7 +41,6 @@ mapping:
             type: str
           type:
             type: str
-            required: true
           description:
             type: str
           test_passed:
