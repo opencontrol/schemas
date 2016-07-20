@@ -13,12 +13,12 @@ satisfies:
     verification_key: UAA_Verification_1
   implementation_status: partial
   implementation_statuses:
-    - text: partial
-    - text: planned
+    - partial
+    - planned
   control_origin: shared
   control_origins:
-    - text: shared
-    - text: inherited
+    - shared
+    - inherited
   narrative:
     - key: "a"
       text: "Justification in narrative form A for CM-2"
