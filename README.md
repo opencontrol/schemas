@@ -35,8 +35,15 @@ satisfies:
     narrative:
       - key: The optional key that represents a particular section of the control. If the key is not specified, assume the string in the following text represents the entire control
         text: The narrative text for the particular section / entire control if there is no key specified
-    implementation_status: Manual status of implementation (for gap analysis)
-    control_origin: The text representing the control origination
+    implementation_status: Manual status of implementation (for gap analysis). Note: We will
+      be deprecating this field in future versions of the schema in favor of implementation_statuses to support multiple values for the status of implementation
+    implementation_statuses:
+      - text: Manual status of implementation (for gap analysis)
+    control_origin: The text representing the control origination. Note: We will be deprecating
+      this field in future versions of the schema in favor of control_origins to support
+      multiple values for control origination.
+    control_origins:
+      - text: The text representing the control origination.
     parameters:
      - key: "The key for a particular parameter of the specific control"
        text: "The parameter text for a particular parameter of a specific control"
