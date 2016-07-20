@@ -1,6 +1,6 @@
 # Schemas
 
-YAML schema, examples, and validators for OpenControl format. You can find the formal definitions and learn about how to do validation in the [`kwalify/`](kwalify/) folder.
+YAML schema, examples, and validators for OpenControl format. You can find the formal definitions and learn about how to do validation in the [`kwalify/`](kwalify/) folder. To find a full standalone example, see [compliance documentation for the nation of Freedonia](https://github.com/opencontrol/freedonia-compliance#readme).
 
 ## Components
 
