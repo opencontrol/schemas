@@ -11,11 +11,9 @@ satisfies:
   - component_key: UAA
     system_key: CloudFoundry
     verification_key: UAA_Verification_1
-  implementation_status: partial
   implementation_statuses:
     - partial
     - planned
-  control_origin: shared
   control_origins:
     - shared
     - inherited
