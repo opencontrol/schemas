@@ -35,8 +35,10 @@ satisfies:
     narrative:
       - key: The optional key that represents a particular section of the control. If the key is not specified, assume the string in the following text represents the entire control
         text: The narrative text for the particular section / entire control if there is no key specified
-    implementation_status: Manual status of implementation (for gap analysis)
-    control_origin: The text representing the control origination
+    implementation_statuses:
+      - Manual status of implementation (for gap analysis)
+    control_origins:
+      - The text representing the control origination.
     parameters:
      - key: "The key for a particular parameter of the specific control"
        text: "The parameter text for a particular parameter of a specific control"
