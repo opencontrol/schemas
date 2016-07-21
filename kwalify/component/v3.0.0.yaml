@@ -27,6 +27,9 @@ mapping:
             type: str
           type:
             type: str
+            enum:
+              - URL
+              - Image
             required: false
   verifications:
     type: seq
@@ -43,6 +46,9 @@ mapping:
             type: str
           type:
             type: str
+            enum:
+              - URL
+              - Image
             required: false
           description:
             type: str

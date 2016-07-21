@@ -25,6 +25,9 @@ mapping:
             type: str
           type:
             type: str
+            enum:
+              - URL
+              - Image
             required: false
   verifications:
     type: seq
@@ -41,7 +44,10 @@ mapping:
             type: str
           type:
             type: str
-            required: true
+            enum:
+              - URL
+              - Image
+            required: false
           description:
             type: str
           test_passed:
