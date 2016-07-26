@@ -3,7 +3,6 @@ name: Amazon Elastic Compute Cloud
 references:
 - name: Reference
   path: http://VerificationURL.com
-  type: URL
 satisfies:
 - control_key: CM-2
   covered_by:
@@ -66,8 +65,6 @@ verifications:
 - key: EC2_Verification_2
   name: EC2 Governor 2
   path: artifact-ec2-1.png
-  type: Image
 - key: EC2_Verification_1
   name: EC2 Verification 1
   path: http://VerificationURL.com
-  type: URL
