@@ -4,21 +4,28 @@ The files in the subdirectories of this folder are organized by the type of file
 
 ## Validation
 
-To validate your OpenControl files, use [the Kwalify command-line tool](http://www.kuwata-lab.com/kwalify/ruby/users-guide.05.html#ref-usage).
+To validate your OpenControl files, do the following from your project root directory:
 
-1. Install Kwalify (requires Ruby).
+1. Install Python (2 or 3).
+1. Ignore the `schemas/` directory from version control (e.g. `.gitignore`).
+1. Clone (or update) the [schemas](https://github.com/opencontrol/schemas) repository.
 
     ```bash
-    gem install kwalify
+    git clone https://github.com/opencontrol/schemas.git
+    # or
+    cd schemas && git pull origin master && cd ..
     ```
 
-1. Run the validation.
+1. Install the dependencies.
 
+    ```bash
+    pip install -r pip install -r schemas/kwalify/requirements.txt
     ```
-    $ kwalify -f kwalify/component/v3.0.0.yaml path/to/my/component.yaml
-    path/to/my/component.yaml#0: valid.
+
+1. Run the tests.
+
+    ```bash
+    pytest
     ```
 
-Note there is also [a Python port](https://github.com/Grokzen/pykwalify).
-
-For a more advanced setup, see [18F's cloud.gov compliance repository](https://github.com/18F/cg-compliance) as an example of using pykwalify as part of continuous integration.
+For a more advanced setup, see [18F's cloud.gov compliance repository](https://github.com/18F/cg-compliance) as an example of using these tests as part of continuous integration.
