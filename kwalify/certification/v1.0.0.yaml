@@ -1,0 +1,12 @@
+type: map
+mapping:
+  standards:
+    type: map
+    mapping:
+      =:
+        type: map
+        mapping:
+          =:
+            type: any
+  name:
+    type: str
