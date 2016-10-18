@@ -1,10 +1,24 @@
 # Schemas
 
-YAML schema, examples, and validators for OpenControl format. You can find the formal definitions and learn about how to do validation in the [`kwalify/`](kwalify/) folder. To find a full standalone example, see [compliance documentation for the nation of Freedonia](https://github.com/opencontrol/freedonia-compliance#readme).
+YAML schema, examples, and validators for OpenControl format. You can find the formal definitions and learn about how to do validation in the [`kwalify/`](kwalify/) folder. The examples from the Glorious (Fake) Nation of Freedonia are the complete standalone example targeted at OpenControl beginners, so we recommend looking at those first.
+
+## Full project examples
+
+* [Freedonia](https://github.com/opencontrol/freedonia-compliance#readme)
+* [cloud.gov](https://github.com/18F/cg-compliance) ([GitBook](https://compliance.cloud.gov/) [rendered with Compliance Masonry](https://github.com/opencontrol/compliance-masonry#creating-gitbook-documentation))
+* [18F Identity Provider (IdP)](https://github.com/18F/identity-idp/tree/master/docs/security)
+* [Environmental Protection Agency (EPA) eManifest/eRegs Notice and Comment](https://github.com/18F/epa-notice)
+* [CALC](https://github.com/18F/calc)
 
 ## Components
 
 Components represent individual parts of an application that deal with specific security requirements. For example, in the [AWS compliance documentation](https://github.com/opencontrol/aws-compliance) the [EC2](https://github.com/opencontrol/aws-compliance/blob/master/IAM/component.yaml) component deals with access control and identity management security requirements. In the [Cloud Foundry compliance documentation](https://github.com/opencontrol/cf-compliance), the [UAA](https://github.com/opencontrol/cf-compliance/blob/master/UAA/component.yaml) the [Cloud Controller](https://github.com/opencontrol/cf-compliance/tree/master/CloudController) components deal with those requirements. In a straightforward Django-based application, for example, Django would be the component that deals with access control and identity management. As a developer building an SSP you most likely only deal with the component documentation.
+
+### Examples
+
+* [Amazon Web Services (AWS)](https://github.com/opencontrol/aws-compliance)
+    * [The (simplified) Freedonia version](https://github.com/opencontrol/freedonia-aws-compliance)
+* [Cloud Foundry](https://github.com/opencontrol/cf-compliance)
 
 ### Structure
 
@@ -49,7 +63,7 @@ satisfies:
         verification_key: The specific verification ID that the reference links to
 ```
 
-Example validation:
+### Validation
 
 ```bash
 kwalify -f kwalify/component/v3.0.0.yaml examples/component_v3.0.0.yaml
@@ -77,6 +91,10 @@ standards:
     description: There is an affordance for managing access by...
 ```
 
+#### See also
+
+* [Freedonia FRIST](https://github.com/opencontrol/freedonia-frist)
+
 ## Certifications
 
 Since standards can have thousands of security requirements (aka controls), agencies like the [GSA](http://www.gsa.gov/) or organizations such as [FedRAMP](https://www.fedramp.gov) have curated a list of controls they require in order grant an IT system Authority to Operate (ATO). The GSA, for example, developed a certification called [the Lightweight ATO (LATO)](https://gsablogs.gsa.gov/innovation/2014/12/10/it-security-security-in-an-agile-development-cloud-world-by-kurt-garbars/), which uses only 24 controls.
@@ -92,6 +110,11 @@ standards:
   PCI:
     6:
 ```
+
+#### See also
+
+* [Freedonia FRIST](https://github.com/opencontrol/freedonia-frist)
+* [General Services Administration (GSA) certifications](https://github.com/18F/GSA-Certifications)
 
 ## opencontrol.yaml
 
@@ -124,7 +147,7 @@ dependencies:
       revision: master
 ```
 
-Example validation:
+### Validation
 
 ```bash
 kwalify -f kwalify/opencontrol/v1.0.0.yaml examples/opencontrol_v1.0.0.yaml
