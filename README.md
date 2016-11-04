@@ -73,7 +73,7 @@ pykwalify -s kwalify/component/v3.0.0.yaml -d examples/component_v3.0.0.yaml
 
 ## Standards
 
-A standard is a list composed of individual security requirements called controls. The U.S. Government's main security standard is [NIST 800-53](https://web.nvd.nist.gov/view/800-53/home).
+A standard is a list composed of individual security requirements called controls.
 
 ### Examples
 
@@ -94,6 +94,8 @@ standards:
 #### See also
 
 * [Freedonia FRIST](https://github.com/opencontrol/freedonia-frist)
+* [National Institute of Standards and Technology (NIST) 800-53](https://github.com/opencontrol/NIST-800-53-Standards)
+* [Payment Card Industry Data Security Standard (PCI DSS)](https://github.com/opencontrol/PCI-DSS-Certifications)
 
 ## Certifications
 
