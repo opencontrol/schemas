@@ -25,8 +25,9 @@ Components represent individual parts of an application or organizational policy
 ```yaml
 name: Name of the component
 key: Key of the component (defaults to the filename if not present)
+version: Version of the component
 documentation_complete: Manual check if the documentation is complete (for gap analysis)
-schema_version: 3.0.0
+schema_version: 3.2.0
 references:
   - name: Name of the reference ie. EC2 website
     path: Relative path of local file or URL ie. diagrams/diagram-1.png
