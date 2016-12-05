@@ -7,6 +7,8 @@ mapping:
         type: str
       family:
         type: str
+      description:
+        type: str
 
   name:
     type: str
