@@ -9,6 +9,7 @@ YAML schema, examples, and validators for OpenControl format. You can find the f
 * [18F Identity Provider (IdP)](https://github.com/18F/identity-idp/tree/master/docs/security)
 * [Environmental Protection Agency (EPA) eManifest/eRegs Notice and Comment](https://github.com/18F/epa-notice)
 * [CALC](https://github.com/18F/calc)
+* [Docker Datacenter example](https://github.com/docker/ddc-opencontrol/tree/master/examples/ddc-compliance)
 
 ## Components
 
@@ -19,6 +20,7 @@ Components represent individual parts of an application or organizational policy
 * [Amazon Web Services (AWS)](https://github.com/opencontrol/aws-compliance)
     * [The (simplified) Freedonia version](https://github.com/opencontrol/freedonia-aws-compliance)
 * [Cloud Foundry](https://github.com/opencontrol/cf-compliance)
+* [Docker Datacenter](https://github.com/docker/ddc-opencontrol)
 
 ### Structure
 
