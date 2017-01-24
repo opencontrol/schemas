@@ -9,6 +9,7 @@ YAML schema, examples, and validators for OpenControl format. You can find the f
 * [18F Identity Provider (IdP)](https://github.com/18F/identity-idp/tree/master/docs/security)
 * [Environmental Protection Agency (EPA) eManifest/eRegs Notice and Comment](https://github.com/18F/epa-notice)
 * [CALC](https://github.com/18F/calc)
+* [Docker Datacenter example](https://github.com/docker/ddc-opencontrol/tree/master/examples/ddc-compliance)
 
 ## Components
 
