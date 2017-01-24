@@ -19,6 +19,7 @@ Components represent individual parts of an application or organizational policy
 * [Amazon Web Services (AWS)](https://github.com/opencontrol/aws-compliance)
     * [The (simplified) Freedonia version](https://github.com/opencontrol/freedonia-aws-compliance)
 * [Cloud Foundry](https://github.com/opencontrol/cf-compliance)
+* [Docker Datacenter](https://github.com/docker/ddc-opencontrol)
 
 ### Structure
 
