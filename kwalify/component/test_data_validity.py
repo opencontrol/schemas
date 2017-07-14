@@ -8,7 +8,7 @@ def get_schema(version):
     return yaml.load(contents)
 
 def create_validator(source_data):
-    version = source_data.get('schema_version', '1.0.0')
+    version = source_data.get('schema_version', '3.1.0')
     schema = get_schema(version)
     validator = Core(source_data={}, schema_data=schema)
     validator.source = source_data
@@ -17,7 +17,6 @@ def create_validator(source_data):
 def test_data_valid():
     """ Check that the content of data fits with masonry schema v2 """
     for component_file in iglob('*/component.yaml'):
-        print(component_file)
         source_data = yaml.load(open(component_file))
         validator = create_validator(source_data)
         try:
