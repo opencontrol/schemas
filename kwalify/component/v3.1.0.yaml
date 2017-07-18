@@ -72,6 +72,19 @@ mapping:
                   text:
                     type: str
                     required: true
+          references:
+            type: seq
+            sequence:
+              - type: map
+                mapping:
+                  name:
+                    type: str
+                    required: true
+                  path:
+                    type: str
+                  type:
+                    type: str
+                    required: true
           control_origin:
             desc: |
               This field will be deprectated in future versions of the schema.
