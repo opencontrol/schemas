@@ -6,7 +6,7 @@ YAML schema, examples, and validators for OpenControl format. You can find the f
 
 * [Freedonia](https://github.com/opencontrol/freedonia-compliance#readme)
 * [cloud.gov](https://github.com/18F/cg-compliance) ([GitBook](https://compliance.cloud.gov/) [rendered with Compliance Masonry](https://github.com/opencontrol/compliance-masonry#creating-gitbook-documentation))
-* [18F Identity Provider (IdP)](https://github.com/18F/identity-idp/tree/master/docs/security)
+* [18F Identity Provider (IdP)](https://github.com/18F/identity-idp/blob/master/docs/SECURITY.md)
 * [Environmental Protection Agency (EPA) eManifest/eRegs Notice and Comment](https://github.com/18F/epa-notice)
 * [CALC](https://github.com/18F/calc)
 * [Docker Datacenter example](https://github.com/docker/compliance/tree/master/examples/opencontrol/DockerEE-Moderate-ATO)
