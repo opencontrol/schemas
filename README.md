@@ -119,7 +119,7 @@ standards:
 * [Freedonia FRIST](https://github.com/opencontrol/freedonia-frist)
 * [General Services Administration (GSA) certifications](https://github.com/18F/GSA-Certifications)
 
-## opencontrol.yaml
+## Systems
 
 The `opencontrol.yaml` file defines an application's documentation configuration settings.
 
