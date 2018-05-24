@@ -150,6 +150,16 @@ dependencies:
       revision: master
 ```
 
+For version control systems, a option key `contextdir` can be specified to handle multiple opencontrol content directories in a single repository.
+For example:
+
+```
+dependencies:
+    - url: https://github.com/organization/repository
+      contextdir: subdirectory_in_repository
+      revision: branch
+```
+
 ### Validation
 
 ```bash
