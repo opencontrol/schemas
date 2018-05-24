@@ -39,6 +39,8 @@ mapping:
             mapping:
               url:
                 type: str
+              contextdir:
+                type: str
               revision:
                 type: str
       standards:
@@ -48,6 +50,8 @@ mapping:
             mapping:
               url:
                 type: str
+              contextdir:
+                type: str
               revision:
                 type: str
       systems:
@@ -56,6 +60,8 @@ mapping:
           - type: map
             mapping:
               url:
+                type: str
+              contextdir:
                 type: str
               revision:
                 type: str
