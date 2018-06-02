@@ -100,7 +100,7 @@ standards:
 
 ## Certifications
 
-Since standards can have thousands of security requirements (aka controls), agencies like the [GSA](http://www.gsa.gov/) or organizations such as [FedRAMP](https://www.fedramp.gov) have curated a list of controls they require in order grant an IT system Authority to Operate (ATO). The GSA, for example, developed a certification called [the Lightweight ATO (LATO)](https://gsablogs.gsa.gov/innovation/2014/12/10/it-security-security-in-an-agile-development-cloud-world-by-kurt-garbars/), which uses only 24 controls.
+Since standards can have thousands of security requirements (aka controls), agencies like the [GSA](http://www.gsa.gov/) or organizations such as [FedRAMP](https://www.fedramp.gov) have curated a list of controls they require in order grant an IT system Authority to Operate (ATO). These are also known as "baselines". The GSA, for example, developed a baseline called [the Lightweight ATO (LATO)](https://gsablogs.gsa.gov/innovation/2014/12/10/it-security-security-in-an-agile-development-cloud-world-by-kurt-garbars/), which uses only 24 controls.
 
 ### Example
 
