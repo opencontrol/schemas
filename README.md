@@ -8,7 +8,7 @@ YAML schema, examples, and validators for OpenControl format. You can find the f
 * [cloud.gov](https://github.com/18F/cg-compliance) ([GitBook](https://compliance.cloud.gov/) [rendered with Compliance Masonry](https://github.com/opencontrol/compliance-masonry#creating-gitbook-documentation))
 * [Environmental Protection Agency (EPA) eManifest/eRegs Notice and Comment](https://github.com/18F/epa-notice)
 * [CALC](https://github.com/18F/calc)
-* [Docker Datacenter example](https://github.com/docker/compliance/tree/master/examples/opencontrol/DockerEE-Moderate-ATO)
+* [Docker Enterprise Edition sample](https://github.com/docker/compliance/tree/master/examples/opencontrol/DockerEE-Moderate-ATO)
 
 ## Components
 
@@ -19,7 +19,8 @@ Components represent individual parts of an application or organizational policy
 * [Amazon Web Services (AWS)](https://github.com/opencontrol/aws-compliance)
     * [The (simplified) Freedonia version](https://github.com/opencontrol/freedonia-aws-compliance)
 * [Cloud Foundry](https://github.com/opencontrol/cf-compliance)
-* [Docker Datacenter](https://github.com/docker/ddc-opencontrol)
+* [Docker Enterprise Edition](https://github.com/docker/compliance)
+* [Red Hat](https://github.com/ComplianceAsCode/redhat)
 
 ### Structure
 
