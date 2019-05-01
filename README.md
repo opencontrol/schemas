@@ -184,3 +184,19 @@ kwalify -f kwalify/opencontrol/v1.0.0.yaml examples/opencontrol_v1.0.0.yaml
 # OR
 pykwalify -s kwalify/opencontrol/v1.0.0.yaml -d examples/opencontrol_v1.0.0.yaml
 ```
+
+## Relationship to other formats
+
+### OSCAL
+
+[OSCAL](https://pages.nist.gov/OSCAL/) is a schema being developed by the U.S. [National Institute of Standards & Technology (NIST)](https://www.nist.gov/). It is meant to express control information in a precise way, and can be thought of as a more detailed version of [the OpenControl schemas](https://github.com/opencontrol/schemas). Where OSCAL's focus is precision, the OpenControl schema's focus is on usability.
+
+The mapping:
+
+| OSCAL                                                            | OpenControl                      |
+| ---------------------------------------------------------------- | -------------------------------- |
+| [Catalog](https://pages.nist.gov/OSCAL/concepts/#oscal-catalogs) | [Standard](#standards)           |
+| [Profile](https://pages.nist.gov/OSCAL/concepts/#oscal-profiles) | [Certification](#certifications) |
+| [Implementation](https://pages.nist.gov/OSCAL/roadmap/)          | [Component](#components)         |
+
+The two communities have a good relationship, and there is a lot of overlap in terms of participants.
