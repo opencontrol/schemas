@@ -15,7 +15,7 @@ See also: [Compliance Masonry for the Compliance Literate](https://github.com/op
 ## Full project examples
 
 * [Freedonia](https://github.com/opencontrol/freedonia-compliance#readme)
-* [cloud.gov](https://github.com/18F/cg-compliance) ([GitBook](https://compliance.cloud.gov/) [rendered with Compliance Masonry](https://github.com/opencontrol/compliance-masonry#creating-gitbook-documentation))
+* [cloud.gov](https://github.com/18F/cg-compliance) ([GitBook](https://compliance.cloud.gov/) [rendered with Compliance Masonry](https://github.com/opencontrol/compliance-masonry#creating-gitbook-documentation)) or [alternative source](https://github.com/nsagoo-pivotal/cloud-dot-gov)
 * [Environmental Protection Agency (EPA) eManifest/eRegs Notice and Comment](https://github.com/18F/epa-notice)
 * [CALC](https://github.com/18F/calc)
 * [Docker Enterprise Edition sample](https://github.com/docker/compliance/tree/master/examples/opencontrol/DockerEE-Moderate-ATO)
